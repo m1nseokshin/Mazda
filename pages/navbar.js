@@ -53,7 +53,7 @@ export default function Navbar(){
                 </div>
                 <div className="icons">
                   <div className="search" href="/"><Image src={Search} alt="MAZDA" /></div>
-                  <Link className="account" href="/account"><Image src={Account} alt="MAZDA" /></Link>
+                  <Link className="account" href="/login"><Image src={Account} alt="MAZDA" /></Link>
                 </div>
             </div>
         </div>
