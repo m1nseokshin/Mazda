@@ -40,6 +40,7 @@ export default function Footerbar(){
 
     return (
         <div>
+            <div className={styles.whitebar}></div>
             <div className="problemcontainer">
                 <div className={styles.problemitem}>
                     <div className={styles.text_01}>문제가 있으신가요?</div>
@@ -70,9 +71,9 @@ export default function Footerbar(){
                     <Link href="/support" className={styles.footersubtitle}>Support</Link>
                 </div>
                 <div className={styles.footeritem2}>
-                    <Link href='/' className={styles.hyperlinkimg}><Image src={Sns_01} alt="facebook"/></Link>
-                    <Link href='/' className={styles.hyperlinkimg}><Image src={Sns_02} alt="youtube"/></Link>
-                    <Link href='/' className={styles.hyperlinkimg}><Image src={Sns_03} alt="instagram"/></Link>
+                    <Link href='https://www.facebook.com/MazdaUSA' className={styles.hyperlinkimg}><Image src={Sns_01} alt="facebook"/></Link>
+                    <Link href='https://www.youtube.com/user/mazdausa' className={styles.hyperlinkimg}><Image src={Sns_02} alt="youtube"/></Link>
+                    <Link href='https://www.instagram.com/mazda_jp/' className={styles.hyperlinkimg}><Image src={Sns_03} alt="instagram"/></Link>
                 </div>
             </div>
 

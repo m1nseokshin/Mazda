@@ -68,7 +68,7 @@ export default function Home() {
           <Link href="/loremipsum"  className="box-item1">
             <div className="textbox-01">
               <div className="title">RX-7이 기억되는 이유</div>
-              <div className="suvtitle">RX-7은 출시 이후부터 지금까지 사람들의 기억 속에 자리를 잡아왔습니다. <br/>이니셜 D, 분노의 질주, 퍼시픽 림 등 여러 매체에서 등장하는 RX-7의 모습을 확인해보세요.</div>
+              <div className="subtitle">RX-7은 출시 이후부터 지금까지 사람들의 기억 속에 자리를 잡아왔습니다. <br/>이니셜 D, 분노의 질주, 퍼시픽 림 등 여러 매체에서 등장하는 RX-7의 모습을 확인해보세요.</div>
               <div className="learnmore">더 알아보기 &gt; </div>
             </div>
             <Image src={Item_01} alt="RX-7이 기억되는 이유" />
@@ -79,7 +79,7 @@ export default function Home() {
           <Link href="/loremipsum"  className="box-item2">
             <div className="textbox-01">
               <div className="title">엔진 기술의 핵심</div>
-              <div className="suvtitle">RX-7의 엔진 기술에 대해 알아보세요.</div>
+              <div className="subtitle">RX-7의 엔진 기술에 대해 알아보세요.</div>
               <div className="learnmore">더 알아보기 &gt; </div>
             </div>
             <Image src={Item_02} alt="엔진 기술의 핵심" />
@@ -87,7 +87,7 @@ export default function Home() {
           <Link href="/loremipsum" className="box-item3">
             <div className="textbox-01">
               <div className="title">Mazda가 만든다는 것</div>
-              <div className="suvtitle">기술혁신과 도전적인 회사의 만남.</div>
+              <div className="subtitle">기술혁신과 도전적인 회사의 만남.</div>
               <div className="learnmore">더 알아보기 &gt; </div>
             </div>
             <Image src={Item_03} alt="Mazda가 만든다는 것" />

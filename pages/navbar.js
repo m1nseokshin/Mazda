@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "@/styles/navbar.module.css"
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 //이미지 파일 임포트
 import Image from "next/image"
@@ -10,33 +11,59 @@ import Account from "/public/image/account.svg"
 
 export default function Navbar(){
 
+  const router = useRouter();
+
     // 검색 바 스크립트
 
     useEffect(() => {
-        const Search = document.querySelector('.search');
-        const Background = document.querySelector('.background');
-        const Overlay = document.querySelector('.overlay');
-        const body = document.querySelector('body');
+      const Search = document.querySelector('.search');
+      const Background = document.querySelector('.background');
+      const Overlay = document.querySelector('.overlay');
+      const body = document.querySelector('body');
+      const hamburgerButton = document.querySelector('.hamburger-button');
+      const menuButton = document.querySelector('.menu');
     
-        if (Search) {
-          Search.addEventListener('click', function(event) {
-            event.preventDefault();
-            Search.classList.toggle('active');
-            Overlay.classList.toggle('visible');
-            Background.classList.toggle('visible');
-            body.classList.toggle('active');
-          });
-        }
-    
-        Background.addEventListener('click', function(event) {
+      if (Search) {
+        Search.addEventListener('click', function(event) {
           event.preventDefault();
-    
-          Background.classList.toggle('active');
+          Search.classList.toggle('active');
           Overlay.classList.toggle('visible');
           Background.classList.toggle('visible');
           body.classList.toggle('active');
         });
-      }, []);
+      }
+      
+    
+      Background.addEventListener('click', function(event) {
+        event.preventDefault();
+    
+        Background.classList.toggle('active');
+        Overlay.classList.toggle('visible');
+        Background.classList.toggle('visible');
+        body.classList.toggle('active');
+      });
+    
+      function toggleOverlayMenu() {
+        var overlayMenu = document.querySelector('.overlay-menu');
+        overlayMenu.classList.toggle('visible');
+        hamburgerButton.classList.toggle('active');
+        body.classList.toggle('active');
+      }
+    
+      if (hamburgerButton && menuButton) {
+        hamburgerButton.addEventListener('click', toggleOverlayMenu);
+        menuButton.addEventListener('click', function(event) {
+          event.preventDefault();
+    
+          var overlay = document.querySelector('.overlay-menu');
+          overlay.classList.remove('visible');
+          hamburgerButton.classList.remove('active');
+          body.classList.remove('active');
+          
+        });
+      }
+    }, []);
+    
 
     
     return (
@@ -70,12 +97,45 @@ export default function Navbar(){
       />
     </section>
     <div className="background"></div>
+
   </div>
 
+  <div className="hamburger-button">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div> 
 
-
-
-    </div>
+  <div className="overlay-menu">
+    <nav className="menu">
+      <a
+            className="menu"
+            onClick={() => router.push('/')}
+          >
+            HOME
+          </a>
+          <a
+            className="menu"
+            onClick={() => router.push('/about')}
+          >
+            ABOUT
+          </a>
+          <a
+            className="menu"
+            onClick={() => router.push('/innovation')}
+          >
+            INNOVATION
+          </a>
+          <a
+            className="menu"
+            onClick={() => router.push('/support')}
+          >
+            SUPPORT
+          </a>
+    </nav>
+  </div>
+  </div>
     )
     
 }

@@ -48,7 +48,6 @@
 }
 
 .menus{
-
     text-align: center;
     align-self: center;
     margin-left: 7%;
@@ -63,3 +62,21 @@
     margin-right: 5em;
 }
 
+/* 반응형 디자인 적용 */
+
+@media (max-width:1024px) {
+
+    .headercontainer{
+        margin: 0%;
+    }
+
+    .headeritem{
+        justify-content: space-between;
+    }
+
+    .menus{
+        display: none;
+    }
+    
+    
+}
