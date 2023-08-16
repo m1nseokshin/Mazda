@@ -60,7 +60,7 @@ const Innovation = () => {
         </div>
       </div>
 
-      <Swiper data-aos="fade-left"  data-aos-easing="ease-in-out" data-aos-once="true"
+      <Swiper data-aos="fade"  data-aos-easing="ease-in-out" data-aos-once="true"
         breakpoints={breakpoints}
 
         pagination={{

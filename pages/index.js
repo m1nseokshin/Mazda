@@ -37,7 +37,7 @@ export default function Home() {
               <div className="main-subtitle">1978년 부터 2003년까지 마쓰다가 선보인 최고의 스포츠카,<br />마지막 모델인 3세대 모델을 만나보세요.</div>
             </div>
             <div className="main-item">
-              <Image src={Main_01} alt="RX-7" priority data-aos="fade-left"  data-aos-easing="ease-in-out" data-aos-once="true" />
+              <Image src={Main_01} alt="RX-7" priority data-aos="fade"  data-aos-easing="ease-in-out" data-aos-once="true" />
             </div>
           </div>
         </div>
