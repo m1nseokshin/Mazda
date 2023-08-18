@@ -63,7 +63,7 @@ const Support = () => {
     // script를 document에 붙이기.
     const mapScript = document.createElement('script');
     mapScript.async = true;
-    mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_API_KEY_MAP}&autoload=false`;
+    mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${encodeURIComponent(process.env.NEXT_PUBLIC_KAKAO_API_KEY_MAP)}&autoload=false`;
     mapScript.addEventListener('load', onLoadKakaoMap);
     document.head.appendChild(mapScript);
   }, []);
